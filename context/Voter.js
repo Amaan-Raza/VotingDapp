@@ -12,7 +12,7 @@ import { VotingAddress, VotingAddressABI } from "./constants";
 
 // const client = ipfsHttpClient("https://api.pinata.cloud/pinning/pinFileToIPFS");
 function getAccessToken() {
-  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDZEODg3QTcxOWVENzU0YjhBMTk2QWYxQ0I4MkFkNjgxNzZhMTJkNDAiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzgyNjc1NzAyOTIsIm5hbWUiOiJhbWFhbiJ9.JBRC7OyxrqCjCp1QdPz__YUZQBHQR205QMyc2I3BzK0";
+  return "Your_privateKey";
 }
 const client = new Web3Storage({ token: getAccessToken() });
 
