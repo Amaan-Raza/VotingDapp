@@ -1,8 +1,23 @@
 .vote_status {
-  background-color: #9a02ac;
+  background-color: red;
+
   padding: 0.5rem 1rem;
   font-size: 1.3rem;
   color: #fff;
   font-weight: 700;
   border-radius: 0.2rem;
+  margin: 1rem;
+}
+.vote_status_voted {
+  background-color: green;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  margin: 1rem;
+}
+
+.about {
+  padding: 1rem;
 }

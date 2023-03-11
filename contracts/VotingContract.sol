@@ -13,6 +13,7 @@ contract Create {
 
     address public votingOrganizer;
 
+    //CANDIDATE DATA
     struct Candidate {
         uint256 candidateId;
         string age;

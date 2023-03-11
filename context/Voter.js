@@ -153,7 +153,7 @@ export const VotingProvider = ({ children }) => {
       const voterList = await contract.getVoterLength();
       setVoterLength(voterList.toNumber());
     } catch (error) {
-      setError("Something weent wring fetching data");
+      setError("Connect your MetaMask wallet and reload!");
     }
   };
 

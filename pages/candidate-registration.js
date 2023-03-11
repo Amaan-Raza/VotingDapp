@@ -53,13 +53,13 @@ const candidateRegistration = () => {
             <img src={fileUrl} alt="Voter Image" />
             <div className={Style.voterInfo_paragraph}>
               <p>
-                Name: <span>&nbps; {candidateForm.name}</span>
+                Name: <span> {candidateForm.name}</span>
               </p>
               <p>
-                Add: <span>&nbps; {candidateForm.address.slice(0, 20)}</span>
+                Address: <span> {candidateForm.address.slice(0, 7)}</span>
               </p>
               <p>
-                Age: <span>&nbps; {candidateForm.age}</span>
+                Age: <span> {candidateForm.age}</span>
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ const candidateRegistration = () => {
             <div className={Style.sideInfo_box}>
               <h4>Create Candidate For Voting</h4>
               <p>Blockchain voting organization, provide ethereum ecosystem</p>
-              <p className={Style.sideInfo_para}>Contract Candidate List</p>
+              <p className={Style.sideInfo_para}>Candidate List</p>
               <div className={Style.card}>
                 {candidateArray.map((el, i) => (
                   <div key={i + 1} className={Style.card_box}>
@@ -104,8 +104,8 @@ const candidateRegistration = () => {
                   <div className={Style.voter_container_box_div_image}>
                     <Image
                       src={uploadPic}
-                      width={150}
-                      height={150}
+                      width={100}
+                      height={90}
                       objectFit="contain"
                       alt="File Upload"
                     />
@@ -137,8 +137,8 @@ const candidateRegistration = () => {
           />
           <Input
             inputType="text"
-            title="Age"
-            placeholder="Voter Position"
+            title="Party"
+            placeholder="Candidate Party"
             handleClick={(e) =>
               setCandidateForm({ ...candidateForm, age: e.target.value })
             }
@@ -157,14 +157,15 @@ const candidateRegistration = () => {
       <div className={Style.createdVoter}>
         <div className={Style.createdVoted_info}>
           <Image src={creatorPic} width={150} height={150} alt="User Photo" />
-          <p>Notice for User</p>
+          <p>Notice for User :</p>
           <br />
           <p>
-            Organizer <span>0x989..</span>
+            Only Organizer of the voting contract can create candidate for
+            election.
           </p>
           <br />
           <p>
-            Only Organizer of the voting contract can create voter for election.
+            Organizer: <span>0xf39F...</span>
           </p>
         </div>
       </div>

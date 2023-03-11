@@ -7,7 +7,7 @@ function Card({ candidateArray, giveVote }) {
   return (
     <div className={Style.card}>
       {candidateArray.map((el, i) => (
-        <div className={Style.card_box}>
+        <div key={i + 1} className={Style.card_box}>
           <div className={Style.image}>
             <img src={el[3]} alt="profile" />
           </div>
@@ -16,7 +16,7 @@ function Card({ candidateArray, giveVote }) {
               {el[1]} #{el[2].toNumber()}
             </h2>
             <p>{el[0]}</p>
-            <p>Address: {el[6].slice(0, 30)}..</p>
+            <p>Address: {el[6].slice(0, 20)}..</p>
             <p className={Style.total}>Total Vote</p>
           </div>
 

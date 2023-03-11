@@ -1,16 +1,17 @@
 import React, { useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillLock, AiFillUnlock } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import { VotingContext } from "../../context/Voter";
 import Style from "./NavBar.module.css";
 import Button from "../Button/Button";
+import logo from "../../assets/logo.png";
 
 const NavBar = () => {
   const { connectWallet, error, currentAccount } = useContext(VotingContext);
 
-  const [openNav, setOpenNav] = useState(true);
+  const [openNav, setOpenNav] = useState(false);
 
   const openNavigation = () => {
     if (openNav) {
@@ -34,7 +35,7 @@ const NavBar = () => {
       <div className={Style.navbar_box}>
         <div className={Style.title}>
           <Link href={{ pathname: "/" }}>
-            <Image src="" alt="Logo" width={80} height={80} />
+            <Image src={logo} alt="Logo" width={80} height={80} />
           </Link>
         </div>
         <div className={Style.connect}>
@@ -47,9 +48,9 @@ const NavBar = () => {
                 {currentAccount && (
                   <span>
                     {openNav ? (
-                      <AiFillUnlock onClick={() => openNavigation()} />
+                      <AiOutlineMenu onClick={() => openNavigation()} />
                     ) : (
-                      <AiFillLock onClick={() => openNavigation()} />
+                      <AiOutlineMenu onClick={() => openNavigation()} />
                     )}
                   </span>
                 )}
@@ -76,7 +77,7 @@ const NavBar = () => {
               )}
             </div>
           ) : (
-            <button onClick={() => connectWallet()}>Connect Wallet</button>
+            <button onClick={() => connectWallet()}>Connect Wallet </button>
           )}
         </div>
       </div>

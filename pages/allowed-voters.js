@@ -49,13 +49,13 @@ const allowedVoters = () => {
             <img src={fileUrl} alt="Voter Image" />
             <div className={Style.voterInfo_paragraph}>
               <p>
-                Name: <span>&nbps; {formInput.name}</span>
+                Name: <span> {formInput.name}</span>
               </p>
               <p>
-                Add: <span>&nbps; {formInput.address.slice(0, 20)}</span>
+                Add: <span> {formInput.address.slice(0, 10)}</span>
               </p>
               <p>
-                Pos: <span>&nbps; {formInput.position}</span>
+                Age: <span> {formInput.position}</span>
               </p>
             </div>
           </div>
@@ -66,7 +66,7 @@ const allowedVoters = () => {
             <div className={Style.sideInfo_box}>
               <h4>Create Candidate For Voting</h4>
               <p>Blockchain voting organization, provide ethereum ecosystem</p>
-              <p className={Style.sideInfo_para}>Contract Candidate List</p>
+              <p className={Style.sideInfo_para}>Voter List</p>
               <div className={Style.card}>
                 {voterArray.map((el, i) => (
                   <div key={i + 1} className={Style.card_box}>
@@ -130,8 +130,8 @@ const allowedVoters = () => {
           />
           <Input
             inputType="text"
-            title="Position"
-            placeholder="Voter Position"
+            title="Age"
+            placeholder="Voter Age"
             handleClick={(e) =>
               setFormInput({ ...formInput, position: e.target.value })
             }
