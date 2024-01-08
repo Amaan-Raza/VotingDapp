@@ -1,14 +1,63 @@
 # Decentralised Voting App
 
-This voting app aims to address the issue of fair and secure voting in a decentralized manner. By leveraging the power of the Ethereum blockchain, the app ensures that duplicate votes are not allowed and only authorized voters can participate in the voting process. Additionally, the app restricts the adding of candidates and voters to only the organizer, ensuring that the voting process remains transparent and fair. Overall, the app provides a secure and transparent way for organizers to conduct voting, while ensuring that voters have confidence in the fairness and accuracy of the results. By solving these key problems, this app has the potential to revolutionize the way voting is conducted in various settings, including elections, surveys, and decision-making processes.
 
-This app also demonstrates a basic HartHat use case.
-Try running some of the following tasks:
+Welcome to the Decentralised Voting App! This decentralized voting application is built using Next.js 13, React, Web3Storage (as IPFS database), Solidity, and Hardhat.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+## Getting Started
+
+### Prerequisites
+
+Before you begin, make sure you have the following:
+
+- [Node.js](https://nodejs.org/) installed
+- Ethereum development environment using [Hardhat](https://hardhat.org/)
+- [Web3Storage](https://web3.storage/) token. You can obtain it by signing up [here](https://web3.storage/login)
+
+### Setup
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/your-repository.git
+    cd your-repository
+    ```
+
+2. **Create a `.env` file in the project root with the following content:**
+
+    ```env
+    WEB3STORAGE_TOKEN=your-web3storage-token
+    ```
+
+    Replace `your-web3storage-token` with the token obtained from Web3Storage.
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+4. **Start the Hardhat Ethereum development environment:**
+
+    ```bash
+    npx hardhat node
+    ```
+
+5. **Deploy the smart contracts to the local Ethereum network:**
+
+    ```bash
+    npx hardhat run scripts/deploy.js --network localhost
+    ```
+
+6. **Run the application:**
+
+    ```bash
+    npm run dev
+    ```
+
+## Usage
+
+Visit `http://localhost:3000` in your browser to access the Web3 Voting App. Use the decentralized voting features provided by the application.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
