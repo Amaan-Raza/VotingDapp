@@ -18,7 +18,7 @@ Before you begin, make sure you have the following:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/AmaanRaza28/VotingDapp
     cd your-repository
     ```
 
