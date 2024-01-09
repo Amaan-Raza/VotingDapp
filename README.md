@@ -19,7 +19,7 @@ Before you begin, make sure you have the following:
 
     ```bash
     git clone https://github.com/AmaanRaza28/VotingDapp
-    cd your-repository
+    cd VotingDapp
     ```
 
 2. **Create a `.env` file in the project root with the following content:**
